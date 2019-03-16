@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:dubbo="http://code.alibabatech.com/schema/dubbo" xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd
+        http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+
+    <mvc:annotation-driven>
+        <mvc:message-converters>
+            <bean class="com.alibaba.fastjson.support.spring.FastJsonHttpMessageConverter">
+                <property name="supportedMediaTypes" value="application/json"/>
+                <property name="features">
+                    <array>
+                        <!--支持空值-->
+                        <value>WriteMapNullValue</value>
+                        <!--string转成时间格式-->
+                        <value>WriteDateUseDateFormat</value>
+                    </array>
+                </property>
+            </bean>
+        </mvc:message-converters>
+    </mvc:annotation-driven>
+
+    <!--文件上传解析器-->
+    <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+        <!--限定附件的大小-->
+        <property name="maxUploadSize" value="5242880"/>
+        <!--指定附件的编码格式-->
+        <property name="defaultEncoding" value="UTF-8"/>
+    </bean>
+
+
+    <!--spring与dubbox整合的配置-->
+    <!--配置应用名称-->
+    <dubbo:application name="pinyougou-web-manager"/>
+    <!--配置注册中心的地址-->
+    <dubbo:registry address="zookeeper://192.168.200.128:2181"/>
+    <!--配置扫描暴露的接口位置-->
+    <dubbo:annotation package="cn.itcast.core.controller"/>
+
+    <dubbo:consumer timeout="500000"/>
+
+</beans>

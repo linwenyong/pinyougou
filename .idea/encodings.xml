@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/parent101" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/parent101/pinyougou-common" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/parent101/pinyougou-dao" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/parent101/pinyougou-interface" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/parent101/pinyougou-pojo" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/parent101/pinyougou-service-buyer" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/parent101/pinyougou-service-page" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/parent101/pinyougou-service-search" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/parent101/pinyougou-service-sellergoods" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/parent101/pinyougou-service-user" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/parent101/pinyougou-web-manager" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/parent101/pinyougou-web-portal" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/parent101/pinyougou-web-shop" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/parent101/pinyougou-web-user" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/parent101/pinyougou-web-user" charset="UTF-8" />
+  </component>
+</project>
